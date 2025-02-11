@@ -3,12 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Previous styles remain the same */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background-color: #121212;
@@ -65,39 +60,11 @@
 
         tr:hover {
             background-color: #2a2a2a;
-            transition: background-color 0.2s ease;
         }
 
         .amount {
             text-align: right;
             font-family: 'Monaco', monospace;
-        }
-
-        .summary {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background-color: #252525;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .summary h3 {
-            margin-bottom: 1rem;
-            color: #fff;
-            font-size: 1.3rem;
-        }
-
-        .summary p {
-            margin: 0.5rem 0;
-            font-size: 1.1rem;
-        }
-
-        .notes-section {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: #1a1a1a;
-            border-radius: 12px;
-            position: relative;
         }
 
         .note {
@@ -107,61 +74,8 @@
             border-radius: 8px;
             border-left: 4px solid #4a4a4a;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transform: rotate(-0.5deg);
         }
 
-        .note:nth-child(even) {
-            transform: rotate(0.3deg);
-        }
-
-        .note h4 {
-            color: #fff;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .note p {
-            color: #aaa;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .date {
-            color: #666;
-            font-size: 0.8rem;
-            margin-top: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 0.5rem;
-            }
-
-            .container {
-                padding: 0.5rem;
-            }
-
-            .table-container {
-                margin: 0 -0.5rem;
-                border-radius: 0;
-            }
-
-            th, td {
-                padding: 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            .notes-section {
-                margin-top: 2rem;
-                padding: 1rem;
-            }
-
-            .note {
-                padding: 1rem;
-            }
-        }
-
-        /* Status Indicators */
         .status {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -178,6 +92,11 @@
         .status-pending {
             background: #451a1a;
             color: #f87171;
+        }
+
+        .status-completed {
+            background: #1e3a8a;
+            color: #93c5fd;
         }
     </style>
 </head>
@@ -219,49 +138,51 @@
                     </tr>
                     <tr>
                         <td>Istichara</td>
-                        <td>Application</td>
+                        <td>Mobile App</td>
                         <td>Manager</td>
                         <td class="amount">9,000</td>
                         <td class="amount">983</td>
                         <td class="amount">8,017</td>
-                        <td><span class="status status-active">In Progress</span></td>
+                        <td><span class="status status-active">MVP Ready</span></td>
                     </tr>
                     <tr>
                         <td>Mood Sport</td>
-                        <td>Application</td>
+                        <td>Mobile App</td>
                         <td>Manager</td>
                         <td class="amount">9,000</td>
                         <td class="amount">0</td>
                         <td class="amount">9,000</td>
                         <td><span class="status status-pending">Not Started</span></td>
                     </tr>
+                    <tr>
+                        <td>IPTV App</td>
+                        <td>Mobile App</td>
+                        <td>Manager</td>
+                        <td class="amount">TBD</td>
+                        <td class="amount">0</td>
+                        <td class="amount">TBD</td>
+                        <td><span class="status status-pending">Discussion</span></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="summary">
-            <h3>Financial Summary</h3>
-            <p>Total Budget: 42,000 DH</p>
-            <p>Total Received: 9,983 DH</p>
-            <p>Total Remaining: 32,017 DH</p>
-        </div>
-
         <div class="notes-section">
             <div class="note">
-                <h4>Ebook App Update</h4>
-                <p>Initial payment received. UI design phase completed. Moving forward with core functionality development.</p>
-                <div class="date">February 8, 2025</div>
+                <h4>E-Learning Update</h4>
+                <p>Database will remain with developer until full payment. Next milestone discussion pending. Frontend modifications in progress.</p>
+                <div class="date">February 11, 2025</div>
             </div>
 
             <div class="note">
-                <h4>E-Learning Platform Progress</h4>
-                <p>Second milestone payment received. Backend API integration in progress. Client requested minor revisions to dashboard layout.</p>
-                <div class="date">February 10, 2025</div>
+                <h4>Istichara Progress</h4>
+                <p>MVP is ready. Additional payment expected. Development proceeding as planned.</p>
+                <div class="date">February 11, 2025</div>
             </div>
 
             <div class="note">
-                <h4>Istichara Development Note</h4>
-                <p>Initial setup and project structure complete. Awaiting client feedback on prototype. Next payment milestone due after UI approval.</p>
+                <h4>New Project Discussion</h4>
+                <p>IPTV app project under discussion. Initial proposed budget around $100 post App Store publication.</p>
                 <div class="date">February 11, 2025</div>
             </div>
         </div>
